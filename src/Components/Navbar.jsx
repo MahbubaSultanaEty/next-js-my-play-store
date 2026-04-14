@@ -22,11 +22,16 @@ const Navbar = () => {
             path: '/installation',
             text: "Installation"
         },
+        {
+            path: '/dashboard',
+            text: "dashboard"
+        },
     ]
 
     const pathName = usePathname();
     return (
-       <div className="navbar bg-base-100 shadow-sm">
+        <div className=' bg-base-100 shadow-sm'>
+             <div className="navbar  container mx-auto bg-base-100 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +45,7 @@ const Navbar = () => {
                             navItems.map((navItem, index) => {
                                 const isActive = pathName === navItem.path;
                                 return (<li key={index}>
-                                    <Link className={`hover:text-green-800 ${isActive? "text-green-700 border-b-2 font-bold": ""}`} href={navItem.path} >
+                                    <Link className={`hover:text-green-800 ${isActive? "text-green-700 border-2    font-bold": ""}`} href={navItem.path} >
                                         {navItem.text}</Link>
                                </li> )}                          )
                         }
@@ -55,7 +60,7 @@ const Navbar = () => {
                             navItems.map((navItem, index) => {
                                 const isActive = pathName === navItem.path;
                                 return (<li key={index}>
-                                    <Link className={`hover:text-green-800 ${isActive? "text-green-700 border-b-2 font-bold": ""}`} href={navItem.path} >
+                                    <Link className={`hover:text-green-800 ${isActive? "text-green-700 border-b-2 rounded-none font-bold": ""}`} href={navItem.path} >
                                         {navItem.text}</Link>
                                 </li>)
                             }     
@@ -64,9 +69,11 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn btn-info ">🤍 Contribute</a>
   </div>
 </div>
+        </div>
+      
     );
 };
 

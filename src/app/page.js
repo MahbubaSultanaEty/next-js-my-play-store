@@ -1,7 +1,12 @@
+import Banner from "@/Components/homePage/Banner";
+import Stat from "@/Components/homePage/Stat";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <h3>my play store</h3>
+    <>
+      <Banner></Banner>
+      <Stat></Stat>
+    </>
   );
 }
