@@ -1,5 +1,6 @@
 import React, { isValidElement } from 'react';
 import Image from 'next/image';
+import InstallToggleBtn from '@/Components/ui/InstallToggleBtn';
 
 const appsPromise = async () => {
     const res = await fetch("http://localhost:3000/data.json");
@@ -50,9 +51,7 @@ const AppDetailsPage = async ({ params }) => {
             </div>
 
             {/* Button */}
-            <button className="btn btn-success mt-4">
-              Install
-            </button>
+           <InstallToggleBtn></InstallToggleBtn>
           </div>
         </div>
 
