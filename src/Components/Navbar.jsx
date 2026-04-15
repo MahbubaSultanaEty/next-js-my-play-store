@@ -51,7 +51,7 @@ const Navbar = () => {
                         }
       </ul>
     </div>
-                   <Image src={Logo} alt="logo" width={50} height={50}></Image>              
+                   <Image src={Logo} loading='eager' alt="logo" width={50} height={50}></Image>              
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex gap-5 text-base font-semibold ">

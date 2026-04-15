@@ -12,7 +12,8 @@ const AppCard = ({ app }) => {
           src={app.image}
                   alt={app.title}
                   width={100}
-                  height={100}
+                      height={100}
+                      loading="eager"
           className="w-full h-full object-cover hover:scale-105 transition duration-300"
         />
               </div>
@@ -31,7 +32,7 @@ const AppCard = ({ app }) => {
         <div className="flex justify-between items-center text-sm text-gray-500">
           
           {/* Downloads */}
-          <span>⬇ {app.downloads}</span>
+          <span className='bg-zinc-100 p-2'>⬇ {app.downloads}</span>
 
           {/* Rating */}
           <span className="flex items-center gap-1">
