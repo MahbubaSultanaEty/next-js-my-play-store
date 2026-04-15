@@ -14,7 +14,7 @@ const useApps = () => {
             setTimeout(() => {
                 setApps(data);
                 setLoading(false)
-            }, 1000);
+            }, 1500);
         };
         fetchData();
     }, [])

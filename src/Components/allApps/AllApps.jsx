@@ -13,7 +13,7 @@ const AllApps = () => {
          <div className="container mx-auto my-15">
       {/* Section header */}
       <div className="mb-8 text-center">
-        <h2 className="font-bold text-4xl">Trending apps</h2>
+        <h2 className="font-bold text-4xl my-4">All apps</h2>
         <p className="text-gray-600">
           Discover apps for everything—from learning and productivity to entertainment
         </p>
@@ -32,7 +32,7 @@ const AllApps = () => {
 
       <div className="text-center mt-4">
         <Link href={"/apps"}>
-          <button className="btn bg-purple-500 text-white">View All</button>
+          <button className="btn bg-pink-500 text-white">View All</button>
         </Link>
       </div>
     </div>
