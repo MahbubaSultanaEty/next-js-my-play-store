@@ -1,15 +1,16 @@
-import React from 'react';
+import AllApps from "@/Components/allApps/AllApps";
+
+
 
 export const metadata = {
   title: "Apps Page || My Play Store",
   description: "A Play store app for practice purpose",
 };
 
-const AppPage = () => {
+const AppPage = () => {   
+    
     return (
-        <div>
-            <h2 className="text-2xl font bld">APp Page</h2>
-        </div>
+       <AllApps></AllApps>
     );
 };
 
