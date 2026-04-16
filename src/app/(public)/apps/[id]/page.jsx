@@ -1,6 +1,7 @@
 import React, { isValidElement } from 'react';
 import Image from 'next/image';
 import InstallToggleBtn from '@/Components/ui/InstallToggleBtn';
+import { notFound } from 'next/navigation';
 
 const appsPromise = async () => {
     const res = await fetch("http://localhost:3000/data.json");
@@ -13,6 +14,9 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const apps = await appsPromise();
   const app = apps.find(app => app.id == id);
+  if (!app) {
+    return {title: "Not Found"}
+  }
   return {
     title : app.title,
   }
@@ -27,7 +31,11 @@ const AppDetailsPage = async ({ params }) => {
     
     const apps =await appsPromise();
     console.log("apps", apps);
-    const app = apps.find((app) => app.id === Number(id));
+  const app = apps.find((app) => app.id === Number(id));
+  
+  if (!app) {
+    notFound()
+  }
     
     return (
          <div className="min-h-screen bg-base-200 p-6">

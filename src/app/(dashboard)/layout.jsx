@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
+
 const DashboardLayout = ({children}) => {
     return (
         <div>
@@ -29,8 +32,10 @@ const DashboardLayout = ({children}) => {
       <div className="hidden flex-none lg:block">
         <ul className="menu menu-horizontal">
           {/* Navbar menu content here */}
-          <li><a>Navbar Item 1</a></li>
-          <li><a>Navbar Item 2</a></li>
+               <Link href='/'>
+                    <button className="btn btn-info">
+                          Back to Home  <BsArrowRight />
+                    </button></Link>
         </ul>
       </div>
     </div>
@@ -40,8 +45,9 @@ const DashboardLayout = ({children}) => {
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
     <ul className="menu bg-base-200 min-h-full w-80 p-4">
       {/* Sidebar content here */}
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+                            <Link href='/'>
+                                <button className="btn btn-info">Back to Home <BsArrowRight />
+                                </button></Link>
     </ul>
   </div>
 </div>
