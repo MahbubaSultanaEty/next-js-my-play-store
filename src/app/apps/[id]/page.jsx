@@ -6,7 +6,16 @@ const appsPromise = async () => {
     const res = await fetch("http://localhost:3000/data.json");
     const data = res.json();
    
-    return data;
+  return data;
+}
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const apps = await appsPromise();
+  const app = apps.find(app => app.id == id);
+  return {
+    title : app.title,
+  }
 }
 
 const AppDetailsPage = async ({ params }) => {
@@ -51,7 +60,7 @@ const AppDetailsPage = async ({ params }) => {
             </div>
 
             {/* Button */}
-           <InstallToggleBtn></InstallToggleBtn>
+           <InstallToggleBtn app={app}></InstallToggleBtn>
           </div>
         </div>
 
@@ -76,7 +85,7 @@ const AppDetailsPage = async ({ params }) => {
                 <span className="w-16 text-sm">{r.name}</span>
 
                 <progress
-                  className="progress progress-primary w-full"
+                  className="progress progress-info w-full"
                   value={r.count}
                   max="9000000"
                 ></progress>

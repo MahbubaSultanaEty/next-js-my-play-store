@@ -2,6 +2,7 @@ import AllApps from "@/Components/allApps/AllApps";
 
 
 
+
 export const metadata = {
   title: "Apps Page || My Play Store",
   description: "A Play store app for practice purpose",
@@ -10,7 +11,7 @@ export const metadata = {
 const AppPage = () => {   
     
     return (
-       <AllApps></AllApps>
+      <AllApps></AllApps>
     );
 };
 

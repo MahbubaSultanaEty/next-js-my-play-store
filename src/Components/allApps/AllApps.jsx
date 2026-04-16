@@ -1,9 +1,9 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
-import AppCard from "@/Components/ui/AppsCard";
+
 import useApps from '@/hooks/useApps';
-import AppsCard from "@/Components/ui/AppsCard"
+import AppsCard from '@/Components/ui/AppsCard';
 import { HashLoader } from 'react-spinners';
 
 const AllApps = () => {

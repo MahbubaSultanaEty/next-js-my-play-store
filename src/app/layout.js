@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import InstallAppsContextProvider from "./context/InstallAppsContextProvider";
 import Providers from "@/lib/providers";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <Providers>
            <Navbar></Navbar>        
           {children}
+           <ToastContainer />
        </Providers>
        
               

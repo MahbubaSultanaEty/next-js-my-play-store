@@ -1,9 +1,12 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const AppCard = ({ app }) => {
+const AppsCard = ({ app }) => {
   return (
-    <div className="w-64 bg-white rounded-2xl shadow-md hover:shadow-xl transition border-t-purple-700 border-t duration-300 overflow-hidden cursor-pointer mx-auto">
+    <Link href={`/apps/${app.id}`}>
+        <div className="w-64 bg-white rounded-2xl shadow-md hover:shadow-xl transition border-t-purple-700 border-t duration-300 overflow-hidden cursor-pointer mx-auto">
       
       {/* Image */}
           <div className="h-40 flex items-center justify-center  overflow-hidden">
@@ -39,10 +42,15 @@ const AppCard = ({ app }) => {
             ⭐ {app.ratingAvg}
           </span>
         </div>
-
+        
       </div>
-    </div>
+      </div>
+    </Link>
+      
+     
+  
+  
   );
 };
 
-export default AppCard;
+export default AppsCard;

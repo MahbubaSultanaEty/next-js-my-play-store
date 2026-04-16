@@ -5,6 +5,7 @@ import { HashLoader } from "react-spinners";
 import Link from "next/link";
 import useApps from "@/hooks/useApps";
 import AppsCard from "@/Components/ui/AppsCard";
+
 // import { useLoaderData } from "react-router";
 
 // const appsPromise = fetch("/data.json").then((res) => res.json());
