@@ -1,6 +1,6 @@
 'use client'
 import React, { useContext } from 'react';
-import { AppsInstalledContext } from '../context/InstallAppsContextProvider';
+import { AppsInstalledContext } from '../../context/InstallAppsContextProvider';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 
@@ -80,7 +80,7 @@ const InstallationPage = () => {
       {/* Empty State */}
       {installedApps.length === 0 && (
         <div className="text-center mt-20 text-gray-400">
-          <p className="text-xl">No apps installed 😢</p>
+          <p className="text-xl">No apps installed </p>
         </div>
       )}
     </div>

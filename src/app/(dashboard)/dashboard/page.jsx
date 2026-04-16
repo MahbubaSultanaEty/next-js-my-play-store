@@ -1,6 +1,6 @@
 'use client'
 import React, { useContext } from 'react';
-import { AppsInstalledContext } from '../context/InstallAppsContextProvider';
+import { AppsInstalledContext } from '../../context/InstallAppsContextProvider';
 import useApps from '@/hooks/useApps';
 import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 import ChartLegend from '@/Components/ui/ChartLegend';
