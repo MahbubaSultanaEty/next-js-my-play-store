@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { AppsInstalledContext } from '../context/InstallAppsContextProvider';
 import Image from 'next/image';
+import { toast } from 'react-toastify';
 
 
 
@@ -12,7 +13,10 @@ const InstallationPage = () => {
     console.log(installedApps, "contextData");
 
     const handleUninstall = (app) => {
-        
+        const restApps = installedApps.filter(iApp => iApp.id !== app.id);
+
+        setInstalledApps(restApps);
+        toast.warning(`${app.title} is uninstalled!`)
     }
     return (
        <div className="p-8">
